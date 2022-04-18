@@ -1,0 +1,132 @@
+.nodes{
+    min-height: 50vh;
+    background: @white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.l_h button{
+    width: 5vw;
+    height: 5vh;
+    border: 2px solid @purple;
+    background: transparent;
+}
+
+.node_info{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.node{
+    width: 45%;
+    margin: 2vh 0;
+}
+.node h2{
+    color: @purple;
+}
+.node button{
+    border: 2px solid @purple;
+    width: 7vw;
+    height: 5vh;
+    color: @purple;
+    background: transparent;
+    margin: 2vh 0;
+}
+.node_cont{
+    width: 100%;
+    height: 15vh;
+    background: #E6E4F2;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.node.stats .node_cont{
+    background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+ .node_cont ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.node_cont ul li{
+    width: 8vw;
+    height: 8vh;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.node_cont h3{
+    font-size: 2.4vh;
+    color: @purple;
+    display: flex;
+    align-items: center;
+}
+.node_cont p{
+    font-weight: bolder;
+    font-size: 1.2vh;
+    color: @gray;
+}
+.downs h3{
+    color: @gray;
+}
+
+.node_cont section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.node_cont section button{
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    margin: 0;
+}
+.node_cont section button img{
+    object-fit: cover;
+}
+.node_cont ol{
+    height: 100%;
+    list-style: none;
+    width: 50%;
+}
+.node_cont ol li{
+    height: 4vh;
+    margin: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+.node_cont ol li img{
+    width: 2vw;
+    height: 2vh;
+    transform: scale(0.5);
+}
+
+.dashboard .chains ul li{
+    width: 12vw;
+    height: 25vh;
+}
+
+.dashboard .chains ul li button{
+    width: 7vw;
+    height: 5vh;
+    color: @gray;
+    margin: 2vh 0;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-radius: 4px;
+}

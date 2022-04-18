@@ -1,0 +1,291 @@
+.landing, .dashboard{
+    width: 100%;
+    background: @black;
+}
+
+.land_cont{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: @purple;
+}
+
+.land_h{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.l_h{
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.r_h{
+    height: 60vh;
+}
+.land_cont h1{
+    font-size: 5vh;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+    line-height: 8vh;
+}
+.land_cont p{
+    color: @white;
+    padding-right: 5vw;
+    line-height: 3vh;
+}
+.land_cont ul{
+    display: flex;
+    align-items: center;
+}
+.land_cont ul li{
+    margin: 0 1vw;
+}
+
+.land_cont ul li img{
+    margin-right: 1vw;
+}
+.land_cont section{
+    width: 100%;
+}
+.land_cont section ul{
+    width: 50%;
+    margin: 0 auto;
+
+    justify-content: space-between;
+}
+.land_cont section ul li{
+    width: 10vw;
+    height: 5vh;
+    border: 1px solid @purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.land_cont  ul:nth-child(3) li:nth-child(2) a{
+    text-decoration:underline;
+    color: @purple;
+}
+.act{
+    background: @purple;
+}
+
+
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: @white;
+}
+.features h1, .nodes h1{
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    margin: 4vh 0;
+}
+
+.features ul{
+    width: 90%;
+    margin: 5vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.features ul li{
+    width: 15vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.features ul li h3{
+    padding: 0vh 1vw;
+    text-align: center;
+}
+.features ul li p{
+    line-height: 2.5vh;
+}
+
+.features button{
+    width: 10vw;
+    height: 5vh;
+    background: @purple;
+}
+.chains{
+    background: @lightWhite;
+    padding: 10vh 0;
+}
+.chains ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.chains ul li{
+    width: 15vw;
+    height: 50vh;
+    background: @white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 0vw;
+    cursor: pointer;
+}
+
+.chains ul li ul{
+    flex-direction: column;
+    margin: 5vh 0;
+
+}
+.chains ul li ul li{
+    width: 100%;
+    height: 100%;
+    margin: 1vh 0;
+    padding: 0 1vw;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.chains ul li ul li img{
+    margin-right: .5vw;
+}
+
+.chains .chain, .chains .chain li{
+    background: @black;
+    color: @gray;
+}
+
+
+.chain div img{
+    animation: ch 2s infinite;
+}
+
+@keyframes ch {
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.ch_info{
+    display: flex;
+    align-items: center;
+}
+.chains h3{
+    white-space: pre-wrap;
+    line-height: 3vh;
+    margin-left: 1vw;
+    color: @black;
+}
+.chains h3 span{
+    color: @gray;
+}
+
+.chain .ch_info h3 {
+    color: @white;
+}
+
+
+.last_sec{
+    width: 100%;
+    min-height: 100vh;
+    background: @black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guides{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.guides ul{
+    display: flex;
+    align-items: center;
+    margin: 10vh 0;
+}
+.guides ul li{
+    width: 15vw;
+    height: 30vh;
+    border: 1px solid @purple;
+    margin: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2vh 1vw;
+    cursor: pointer;
+    color: @white;
+}
+.guides ul li div{
+    display: flex;
+}
+.guides h4{
+    white-space: pre-wrap;
+    line-height: 3vh;
+    color: @purple;
+}
+.guides h4 span{
+    color: @gray;
+}
+.guides h3{
+    padding-right: 5vw;
+}
+.guides button{
+    width: 12vw;
+    background: @purple;
+    height: 5vh;
+    border: none;
+}
+.community{
+    color: @white;
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.community ul{
+    display: flex;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+.community ul li{
+    width: 15vw;
+    height: 12vh;
+    border: 1px solid @purple;
+    margin: 0 2vw;
+    padding: 1vh 1vw;
+}
+
+.community ul li a{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.community ul li a h3{
+    display: flex;
+    align-items: center;
+}
+.community ul li h3 img{
+    width: 2vw;
+    height: 4vh;
+    margin-right: 1vw;
+}
+.community ul li a p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: @purple;
+}
