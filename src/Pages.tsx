@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Providers } from './providers';
 import { AdjustmentScreen } from './Utils/Functions';
+import { Client } from './Views/Client';
+import { Country } from './Views/Country';
 import { Dashboard } from './Views/Dashboard';
 import { Landing } from './Views/Landing';
 import { NodeStats } from './Views/Node_stats';
@@ -36,6 +38,8 @@ export function Pages() {
               <Route path="/dashboard" element={ <Dashboard mobV={isMob}/>}/>
               <Route path="/node-stats" element={ <NodeStats mobV={isMob}/>}/>
               <Route path="/operating-system" element={ <OperatingSys mobV={isMob}/>}/>
+              <Route path="/client" element={ <Client mobV={isMob}/>}/>
+              <Route path="/country" element={ <Country mobV={isMob}/>}/>
               <Route path="*" element={ <Landing mobV={isMob}/>}/>
             </Routes>
           </Router>

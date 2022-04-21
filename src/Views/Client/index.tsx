@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { icons } from "../../Assets";
 import { DChart } from "../../Components/DountChart";
 
-export const OperatingSys:FC<any> = (props:any) => {
+export const Client:FC<any> = (props:any) => {
 
 
     const [osNodes, setOsNodes] = useState({
@@ -15,8 +15,8 @@ export const OperatingSys:FC<any> = (props:any) => {
         let _tempL:any = [];
 
         for(let i =0; i< 13; i++){
-            _tempL.push("linux-amd64");
-            _tempS.push(i* 2);
+            _tempL.push(`client${i}`);
+            _tempS.push(i);
 
         }
         setOsNodes({...osNodes, ser:_tempS, lab:_tempL});
@@ -26,7 +26,7 @@ export const OperatingSys:FC<any> = (props:any) => {
 
     return(
         <div className="os">
-            <h1>Operating System</h1>
+            <h1>Client</h1>
             <div className="os_cont">
                 <div className="os_stats">
                     <ol>
