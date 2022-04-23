@@ -7,7 +7,8 @@ import { Country } from './Views/Country';
 import { Dashboard } from './Views/Dashboard';
 import { Landing } from './Views/Landing';
 import { NodeStats } from './Views/Node_stats';
-import { OperatingSys } from './Views/OperatingSys';
+import { Staking } from './Views/Staking';
+import { TokenStats } from './Views/TokenStats';
 
 export function Pages() {
   
@@ -37,9 +38,11 @@ export function Pages() {
               <Route path="/" element={ <Landing mobV={isMob}/>}/>
               <Route path="/dashboard" element={ <Dashboard mobV={isMob}/>}/>
               <Route path="/node-stats" element={ <NodeStats mobV={isMob}/>}/>
-              <Route path="/operating-system" element={ <OperatingSys mobV={isMob}/>}/>
+              <Route path="/staking" element={ <Staking mobV={isMob}/>}/>
               <Route path="/client" element={ <Client mobV={isMob}/>}/>
               <Route path="/country" element={ <Country mobV={isMob}/>}/>
+              <Route path="/tokens" element={ <TokenStats mobV={isMob}/>}/>
+
               <Route path="*" element={ <Landing mobV={isMob}/>}/>
             </Routes>
           </Router>

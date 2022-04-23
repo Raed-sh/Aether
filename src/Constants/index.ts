@@ -15,7 +15,7 @@ export const appbar = [
     },
     {
         name:'Dashboard',
-        link:'/'
+        link:'/dashboard'
     },
 ];
 

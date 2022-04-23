@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { Link } from "react-router-dom";
 import { icons, images } from "../../Assets";
 import { chains, feats, socials } from "../../Constants";
 
@@ -30,9 +31,9 @@ export const Landing:FC<any> = (props:any) => {
                 </div>
                 <section>
                         <ul>
-                            <li className="act"><a href="/">Documentaion</a></li>
-                            <li><a href="/">Logs&TXNS</a></li>
-                            <li><a href="/">Dashboard</a></li>
+                            <li className="act"><a >Documentaion</a></li>
+                            <li><a>Logs&TXNS</a></li>
+                            <Link to="/dashboard"><li>Dashboard</li></Link>
                         </ul>
                     </section>
             </div>

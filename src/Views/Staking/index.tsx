@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { icons } from "../../Assets";
 import { DChart } from "../../Components/DountChart";
 
-export const OperatingSys:FC<any> = (props:any) => {
+export const Staking:FC<any> = (props:any) => {
 
 
     const [osNodes, setOsNodes] = useState({

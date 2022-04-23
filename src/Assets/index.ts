@@ -5,6 +5,7 @@ import ip from './icons/ip.svg';
 import network from './icons/network.svg';
 import secure from './icons/secure.svg';
 
+import aether from './icons/aether.svg';
 import polygon from './icons/polygon.svg';
 import ethereum from './icons/ethereum.svg';
 import binance from './icons/binance.svg';
@@ -57,7 +58,7 @@ export const images = {
 
 export const icons = {
     chains:{
-        polygon,ethereum,binance,avalanche,fantom,cronos
+        aether,polygon,ethereum,binance,avalanche,fantom,cronos
     },
     socials:{
         discord, telegram,twitter, github

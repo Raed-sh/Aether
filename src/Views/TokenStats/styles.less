@@ -1,0 +1,74 @@
+.tokens{
+    background: @lightWhite;
+}
+
+.tok_h{
+    padding-top: 2vh;
+    display: flex;
+    align-items: center;
+}
+.tok_h h3{
+    padding-left: 1vw;
+}
+.tok_h h3 span{
+    color: @gray;
+    font-weight: bolder;
+}
+
+.tokens .s_table{
+    height: 30vh;
+    overflow: auto;
+}
+
+.tokens .s_table button{
+    width: 5vw;
+    height: 3vh;
+    background: @purple;
+    border: none;
+    border-radius: .5vh;
+}
+
+.tokens .s_table button:hover{
+    transform: scale(1.1);
+}
+
+.toks{
+    padding: 4vh 0;
+    border-top: 2px solid @gray;
+}
+
+.toks ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toks ul li{
+    width: 13vw;
+    height: 26vh;
+    margin: 0 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+}
+.toks ul li h2{
+    display: flex;
+    align-items: center;
+}
+.toks ul li h3{
+    white-space: pre-wrap;
+    text-align: center;
+}
+.toks ul li h3 span{
+    color: @gray;
+}
+.toks ul li button{
+    width: 7vw;
+    height: 4vh;
+    color: @black;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-radius: 4px;
+}

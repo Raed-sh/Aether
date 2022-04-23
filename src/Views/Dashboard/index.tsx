@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { Link } from "react-router-dom";
 import { icons, images } from "../../Assets";
 import { chains, feats, socials } from "../../Constants";
 
@@ -19,7 +20,7 @@ export const Dashboard:FC<any> = (props:any) => {
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
                             ut aliquip ex ea commodo consequat. Duis aute irure.
                         </p>
-                        <button>Log out</button>
+                        <Link to={"/tokens"}><button>Contracts</button></Link>
                     </div>
                     <div className="r_h">
                         <img src={images.bgm}/>
