@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Providers } from './providers';
 import { AdjustmentScreen } from './Utils/Functions';
 import { Client } from './Views/Client';
+import { Contracts } from './Views/Contracts';
 import { Country } from './Views/Country';
 import { Dashboard } from './Views/Dashboard';
 import { Landing } from './Views/Landing';
@@ -42,7 +43,7 @@ export function Pages() {
               <Route path="/client" element={ <Client mobV={isMob}/>}/>
               <Route path="/country" element={ <Country mobV={isMob}/>}/>
               <Route path="/tokens" element={ <TokenStats mobV={isMob}/>}/>
-
+              <Route path="/contracts" element={ <Contracts mobV={isMob}/>}/>
               <Route path="*" element={ <Landing mobV={isMob}/>}/>
             </Routes>
           </Router>

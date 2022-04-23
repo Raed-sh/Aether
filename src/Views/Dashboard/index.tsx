@@ -18,7 +18,7 @@ export const Dashboard:FC<any> = (props:any) => {
                             Manage all different types of assets directly in your dashboard, from fungible to non-fungibile tokens, across all supported networks.
                             Deploy contracts with the Aether to instantly have multi-chain support, activate your contract on any of the chains at anytime, interact with the connection all from your dashboard.<br/> 
                         </p>
-                        <Link to={"/tokens"}><button>Contracts</button></Link>
+                        <Link to={"/contracts"}><button>Contracts</button></Link>
                     </div>
                     <div className="r_h">
                         <img src={images.bgm}/>
