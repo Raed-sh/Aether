@@ -14,11 +14,9 @@ export const Dashboard:FC<any> = (props:any) => {
                     <div className="l_h">
                         <h1>Dashboard</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure., "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                            ut aliquip ex ea commodo consequat. Duis aute irure.
+                            Access remote nodes, view node status and performances on all node-supported chains, get insights on transaction counts and network activity, check node balances, withdraw and much more.
+                            Manage all different types of assets directly in your dashboard, from fungible to non-fungibile tokens, across all supported networks.
+                            Deploy contracts with the Aether to instantly have multi-chain support, activate your contract on any of the chains at anytime, interact with the connection all from your dashboard.<br/> 
                         </p>
                         <Link to={"/tokens"}><button>Contracts</button></Link>
                     </div>
