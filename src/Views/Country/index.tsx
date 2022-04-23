@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Map } from "../../Components/Map";
 
 export const Country:FC<any> = (props:any) => {
     return(
@@ -22,7 +23,7 @@ export const Country:FC<any> = (props:any) => {
                 </div>
 
                 <div className="os_chart">
-
+                    <Map/>
                 </div>
             </div>
             <div className="links">
