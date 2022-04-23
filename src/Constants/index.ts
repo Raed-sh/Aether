@@ -284,3 +284,28 @@ export const stats_table = {
         },
     ],
 }
+
+
+
+export const funcs = [
+    {
+        title:"Data Feeds",
+        logo: icons.feed,
+        desc:"Get data and asset prices in your Smart Contracts.",
+    },
+    {
+        title:"Verifiable Random Numbers (VRF)",
+        logo: icons.varis,
+        desc:"With Aetherchain VRF to consume randomness in your smart contracts.",
+    },{
+        title:"Call External APIs",
+        logo: icons.api,
+        desc:"Request & Receive data from any API using the Aetherchain contract library.",
+    },
+    {
+        title:"Automate Contracts",
+        logo: icons.auto,
+        desc:"Automate smart contract functions and maintenance using Aetherchain Keepers.",
+    },
+
+]

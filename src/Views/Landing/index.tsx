@@ -130,10 +130,7 @@ export const Landing:FC<any> = (props:any) => {
                             </li>
                         </ul>*/}
                 </div>
-                
-
             </div>
-
         </div>
     );
 };
