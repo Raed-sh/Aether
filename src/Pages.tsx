@@ -6,6 +6,7 @@ import { Client } from './Views/Client';
 import { Contracts } from './Views/Contracts';
 import { Country } from './Views/Country';
 import { Dashboard } from './Views/Dashboard';
+import { Documentation } from './Views/Documentation';
 import { Landing } from './Views/Landing';
 import { NodeStats } from './Views/Node_stats';
 import { Staking } from './Views/Staking';
@@ -44,6 +45,8 @@ export function Pages() {
               <Route path="/country" element={ <Country mobV={isMob}/>}/>
               <Route path="/tokens" element={ <TokenStats mobV={isMob}/>}/>
               <Route path="/contracts" element={ <Contracts mobV={isMob}/>}/>
+              <Route path="/documentation" element={ <Documentation mobV={isMob}/>}/>
+
               <Route path="*" element={ <Landing mobV={isMob}/>}/>
             </Routes>
           </Router>

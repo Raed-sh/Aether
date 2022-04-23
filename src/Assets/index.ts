@@ -41,6 +41,8 @@ import up_card from './icons/up_card.svg';
 
 import logo from './images/logo.svg';
 import bgm from './images/bgm.png';
+import bg from './images/bg.png';
+
 
 import p_p from './icons/p_p.svg';
 import p_o from './icons/p_o.svg';
@@ -52,9 +54,16 @@ import c_lb from './icons/c_lb.svg';
 import A from './icons/A.svg';
 
 
+import api from './icons/api.svg';
+import auto from './icons/auto.svg';
+import feed from './icons/feed.svg';
+import varis from './icons/varis.svg';
+
+
+
 
 export const images = {
-    logo,bgm
+    logo,bgm, bg
 }
 
 export const icons = {
@@ -69,5 +78,5 @@ export const icons = {
     },
     qm,cost,ip,network,secure,arrow,act,non_act,metamask, walletconnect,
     d_arr, up_arr, down_card, up_card,
-    p_o, p_p, l_arr, r_arr, A
+    p_o, p_p, l_arr, r_arr, A, api, auto, feed, varis
 }
