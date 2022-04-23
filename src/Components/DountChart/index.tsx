@@ -9,12 +9,13 @@ export const DChart:FC<any> = (props:any) => {
     };
 
     return(
-        <ReactApexChart
-            options={options}
-            series={props.series}
-            type="donut"
-            width="100%"
-            height={300}
-        />
+        <></>
+        // <ReactApexChart
+        //     options={options}
+        //     series={props.series}
+        //     type="donut"
+        //     width="100%"
+        //     height={300}
+        // />
     )
 }
