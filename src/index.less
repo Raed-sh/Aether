@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 200ms ease-in-out;
 
 }
 body{
     background: @white;
-
     font-family: Roboto;
 }
 
@@ -22,6 +22,10 @@ button{
     font-weight: bold;
     cursor: pointer;
 }
+button:hover{
+    transform: scale(1.1);
+}
+
 ul{
     list-style: none;
 }
