@@ -66,12 +66,15 @@ export const Landing:FC<any> = (props:any) => {
 
             <div className="chains">
                 <h1>Supported Blockchains</h1>
-                <ul >
+                <ul>
                     {chains.map((c, idx) => 
                     <li key={idx} className={chain === c.name ? "chain" : ""} onClick={() => setChain(c.name)}>
-                        <div className="ch_info">
-                            <img src={c.logo}/>
-                            <h3>{c.name}{'\n'}<span>{c.symbol}</span></h3>
+                        <div>
+                            <h3>{c.name}{'\n'}</h3>
+                            <div className="ch_info">
+                                <img src={c.logo}/>
+                                <h3><span>{c.symbol}</span></h3>
+                            </div>
                         </div>
                         <ul>
                             {c.features.map((f, idx) => 

@@ -8,6 +8,7 @@ export function AdjustmentScreen() {
   };
 
   // Wallet Handling Functions
+
 async function connectInjected(activate:any) {
   console.log("Start connecting")
   try {
@@ -57,7 +58,6 @@ export function connectMapper(conn_type:string,active:any,activate:any){
       }   
   }
 };
-
 export function toTimestamp(humDate:any){
   var datum = Date.parse(humDate);
   return datum/1000;

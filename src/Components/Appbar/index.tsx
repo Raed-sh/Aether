@@ -27,9 +27,9 @@ export const Appbar:FC = () => {
         )}
         <div className="appbar">
             
-            <div className="logo">
+            <a href="/" className="logo">
                 <img src={images.logo} alt="LOGO"/>
-            </div>
+            </a>
             <ul>
                 {appbar.map((i,idx) => <li key={idx}><a href={i.link}>{i.name}</a></li>)}
             </ul>
