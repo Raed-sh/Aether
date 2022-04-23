@@ -25,6 +25,27 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
+.l_h h1 span {
+    font-size: 3.25em;
+    color: white;
+}
+
+.l_h h1 span:nth-child(1) {
+    font-size: 6em;
+    /*font-family: Allerta;*/
+}
+
+.l_h h1 span:nth-child(4) {
+    font-size: 1em;
+}
+
+.l_h h1 span img {
+    width: 30vh;
+    transform: translate(-1vw, 2vh);
+}
+
+
 .r_h{
     height: 60vh;
 }
@@ -85,7 +106,14 @@
     justify-content: space-around;
     background: @white;
 }
-.features h1, .nodes h1{
+
+.features h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    margin: 4vh 0;
+}
+
+.nodes h1{
     font-size: 3.5vh;
     text-transform: uppercase;
     margin: 4vh 0;
@@ -104,8 +132,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
 .features ul li h3{
     padding: 0vh 1vw;
     text-align: center;
@@ -115,29 +144,53 @@
 }
 
 .features button{
+    margin: 5vh;
     width: 10vw;
     height: 5vh;
     background: @purple;
 }
+
 .chains{
     background: @lightWhite;
     padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.chains h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    margin: 4vh 0;
+}
+
 .chains ul{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 .chains ul li{
     width: 15vw;
-    height: 50vh;
+    height: 42vh;
     background: @white;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2vh 0vw;
     cursor: pointer;
+    margin: 0.75vw;
 }
+
+.chains ul li button {
+    padding: 1.25vh 3vw;
+    font-size: 2em;
+    font-weight: 300;
+    margin-top: 5vh;
+    color: @purple;
+    background: @white;
+    border-radius: 0.25vw ;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border: none;
+}
+
 
 .chains ul li ul{
     flex-direction: column;
@@ -156,9 +209,12 @@
     margin-right: .5vw;
 }
 
-.chains .chain, .chains .chain li{
+.chains .chain, .chains .chain li {
     background: @black;
     color: @gray;
+}
+
+.chain ul li button{
 }
 
 
@@ -213,8 +269,8 @@
     margin: 10vh 0;
 }
 .guides ul li{
-    width: 15vw;
-    height: 30vh;
+    width: 17vw;
+    height: 23vh;
     border: 1px solid @purple;
     margin: 0 2vw;
     display: flex;
@@ -228,6 +284,7 @@
 .guides ul li div{
     display: flex;
 }
+
 .guides h4{
     white-space: pre-wrap;
     line-height: 3vh;
@@ -238,6 +295,7 @@
 }
 .guides h3{
     padding-right: 5vw;
+    font-size: 1.25em;
 }
 .guides button{
     width: 12vw;

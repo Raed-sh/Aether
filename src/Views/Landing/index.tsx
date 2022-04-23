@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { icons, images } from "../../Assets";
-import { chains, feats, socials } from "../../Constants";
+import { chains, feats, socials, guides } from "../../Constants";
 
 
 export const Landing:FC<any> = (props:any) => {
@@ -12,9 +12,15 @@ export const Landing:FC<any> = (props:any) => {
             <div className="land_cont">
                 <div className="land_h">
                     <div className="l_h">
-                        <h1>Smart Contracts With{'\n'}AETHER Chain</h1>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
-                        <ul>
+                        <h1>
+                        <span>0</span> 
+                        <span>x </span> 
+                        <span><img src={icons.A} /></span>
+                        {'\n'}
+                        The <span>Multi</span>chain Haven
+                        </h1>
+                        {/*<p>The Aether, a decentralized bridge connecting <strong>EVM</strong> chains. {'\n'}</p>*/}
+                        {/*<ul>
                             <li>
                                 <img src={icons.qm}/>
                                 <a href="/">Questions?</a>
@@ -22,7 +28,7 @@ export const Landing:FC<any> = (props:any) => {
                             <li>
                                 <a href="/">Contact Us</a>
                             </li>
-                        </ul>
+                        </ul>*/}
                     </div>
                     <div className="r_h">
                         <img src={images.bgm}/>
@@ -36,7 +42,10 @@ export const Landing:FC<any> = (props:any) => {
                         </ul>
                     </section>
             </div>
-
+            {/*
+                needs to be aligned so the title and the image and the description are all on the same line 
+                vertically and horizontally
+            */}
             <div className="features">
                 <h1>Features And Directions</h1>
                 <ul>
@@ -50,11 +59,12 @@ export const Landing:FC<any> = (props:any) => {
                         )
                     }
                 </ul>
-                <button>Try Aether way</button>
-                <h1>Supported Blockchains</h1>
+                <button>More Info</button>
+                <div></div>
             </div>
 
             <div className="chains">
+                <h1>Supported Blockchains</h1>
                 <ul >
                     {chains.map((c, idx) => 
                     <li key={idx} className={chain === c.name ? "chain" : ""} onClick={() => setChain(c.name)}>
@@ -68,6 +78,7 @@ export const Landing:FC<any> = (props:any) => {
                                 )
                             }
                         </ul>
+                        <button onClick={() => window.open(c.site, "_blank")}>Website</button>
                     </li>
                         )
                     }
@@ -78,21 +89,21 @@ export const Landing:FC<any> = (props:any) => {
                 
                 <div className="guides">
                 <ul >
-                    {feats.map((f,idx) => 
+                    {guides.map((g,idx) => 
                     
-                    <li key={idx}>
+                    <li key={idx} onClick={() => window.open(g.site, "_blank")}>
                         <div>
-                            <h4>Guides/{'\n'}<span>Lorem ipsum</span></h4>
+                            <h4>Guides/{g.name}{'\n'}<span>{g.desc}</span></h4>
                             <img src={""}/>
                         </div>
                         <div>
-                            <h3>Lorem ipsum dolor sit amet</h3>
+                            <h3>{g.action}</h3>
                             <img src={icons.arrow}/>
                         </div>
                     </li>
                 )}
                 </ul>
-                <button>More developer guides</button>
+                <button onClick={() => window.open("/guides", "_blank")}>More developer guides</button>
                 </div>
                 
                 <div className="community">
@@ -100,14 +111,24 @@ export const Landing:FC<any> = (props:any) => {
                     <ul>
                         {socials.map((s,idx) => 
                         <li key={idx}>
-                            <a href={s.link}>
+                            <a href={s.link} target="_blank">
                                 <h3><img src={s.logo}/>{s.name}</h3>
                                 <p>{s.desc} <img src={icons.arrow}/></p>
                             </a>
                             </li>)}
                     </ul>
                 </div>
-                
+                <div>
+                 {/*<ul>
+                            <li>
+                                <img src={icons.qm}/>
+                                <a href="/">Questions?</a>
+                            </li>
+                            <li>
+                                <a href="/">Contact Us</a>
+                            </li>
+                        </ul>*/}
+                </div>
                 
 
             </div>

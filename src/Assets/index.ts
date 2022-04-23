@@ -48,6 +48,7 @@ import c_g from './icons/c_g.svg';
 import c_p from './icons/c_p.svg';
 import c_lb from './icons/c_lb.svg';
 
+import A from './icons/A.svg';
 
 
 
@@ -67,5 +68,5 @@ export const icons = {
     },
     qm,cost,ip,network,secure,arrow,act,non_act,metamask, walletconnect,
     d_arr, up_arr, down_card, up_card,
-    p_o, p_p, l_arr, r_arr
+    p_o, p_p, l_arr, r_arr, A
 }
