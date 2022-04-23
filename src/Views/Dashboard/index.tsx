@@ -20,7 +20,7 @@ export const Dashboard:FC<any> = (props:any) => {
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
                             ut aliquip ex ea commodo consequat. Duis aute irure.
                         </p>
-                        <Link to={"/tokens"}><button>Contracts</button></Link>
+                        <Link to={"/contracts"}><button>Contracts</button></Link>
                     </div>
                     <div className="r_h">
                         <img src={images.bgm}/>
