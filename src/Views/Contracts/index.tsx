@@ -3,7 +3,7 @@ import { icons } from "../../Assets";
 
 export const Contracts: FC<any> = (props: any) => {
 
-    const [checkType, setCheckType] = useState<boolean[]>([false, false]);
+    const [checkType, setCheckType] = useState<boolean[]>([false, true]);
 
 
   return (
