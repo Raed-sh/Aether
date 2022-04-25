@@ -43,6 +43,6 @@ export const BarChart:FC<any> = (props:any) => {
 
 
     return(
-            <ReactApexChart options={chData.options} series={chData.series} type="bar" height={"200px"} width="100%" />
+            <></>
     );
 };
