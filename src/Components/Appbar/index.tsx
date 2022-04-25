@@ -1,6 +1,7 @@
 import { Web3Provider } from "@ethersproject/providers";
 import { useWeb3React } from "@web3-react/core";
 import { FC, useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import { images } from "../../Assets";
 import { appbar } from "../../Constants";
 import { connectedWallet } from "../../Utils/Functions";
@@ -15,6 +16,15 @@ export const Appbar:FC = () => {
     useEffect(() => {
         setPath(window.location.pathname);
       }, []);
+
+      function handleRoutes(i:any){
+          if(i.name.toLowerCase() === "guides"){
+                return <Link to="guides" spy={true} smooth={true}>Guides</Link>
+          }else{
+            return <a href={i.link}>{i.name}</a>
+          }
+      }
+
 
     return(
         <>
@@ -31,7 +41,11 @@ export const Appbar:FC = () => {
                 <img src={images.logo} alt="LOGO"/>
             </a>
             <ul>
-                {appbar.map((i,idx) => <li key={idx}><a href={i.link}>{i.name}</a></li>)}
+                {appbar.map((i,idx) =>
+                    <li key={idx}>
+                        {handleRoutes(i)}
+                    </li>
+                )}
             </ul>
 
             <button onClick={()=> setDisplayModal(true)}>

@@ -58,6 +58,13 @@
     justify-content: space-between;
     align-items: center;
 }
+.box.info h3{
+    white-space: pre-wrap;
+    line-height: 3vh;
+}
+.box.info span{
+    color: @purple;
+}
 .box.txns{
     width: 49%;
     min-height: 58vh;
@@ -85,7 +92,7 @@
     border-radius: 4px;
     margin: 0 1vw;
 }
-.box.txns h2{
+.box h2{
     padding: 2vh 1vw;
     color: @purple;
 }
@@ -97,6 +104,7 @@
     height: 9vh;
     border: 1px solid #DDD9F3;
     padding: 0 1vw;
+    cursor: pointer;
 
 }
 .box.txns ul li div{
@@ -119,7 +127,7 @@
 .box.txns h5{
     padding: 1vh 1vw;
     color: @gray;
-    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%);
     box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
     border-radius: 4px;
 }
@@ -127,10 +135,57 @@
     width: 90%;
     height: 4vh;
     margin: 1vh 5%;
-    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%);
     box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
     border-radius: 4px;
     border: none;
     color: @purple;
     font-size: 1.6vh;
+}
+// transaction Page
+
+.box.trans{
+    width: 100%;
+    min-height: 55vh;
+    margin-top: 3vh;
+}
+.trans ul{
+    border: 1px solid #DDD9F3;
+    padding: 1vh 1vw;
+}
+.trans ul li{
+    width: 60%;
+    margin: 2vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.trans ul li h3{
+    font-size: 1.4vh;
+}
+.trans ul li h3:nth-child(2),.trans ul li h4{
+    width: 80%;
+    text-align: start;
+}
+.trans ul li h3 img{
+    margin-right: .5vw;
+}
+.trans ul li h4{
+    color: green;
+}
+.trans ul li h3 span{
+    color: @purple;
+}
+
+.trans section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trans section h3{
+    white-space: pre-wrap;
+    color: @gray;
+    text-align: center;
+    line-height: 4vh;
 }

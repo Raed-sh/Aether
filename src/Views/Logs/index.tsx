@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import ReactApexChart from "react-apexcharts";
+import { Link } from "react-router-dom";
 import { icons } from "../../Assets";
 import { BarChart } from "../../Components/BarChart";
 import { Searchbar } from "../../Components/Searchbar";
@@ -74,6 +75,7 @@ export const Logs:FC<any> = (props:any) => {
                         <ul>
                             {Array(dummyData).fill(0,).map((_,idx) => 
                             <li>
+                                
                                 <div>CT</div>
                                 <h4>14567896{'\n'}<span>9 Sec Ago</span></h4>
                                 <h4>Miner 666 Mining Pool{'\n'}<span>70 txns <span>in 10sec</span></span></h4>
@@ -86,12 +88,13 @@ export const Logs:FC<any> = (props:any) => {
                     <div className="box txns">
                         <h2>Latest Transactions</h2>
                         <ul>
-                            {Array(dummyData).fill(0,).map((_,idx) => 
-                            <li>
+                            {Array(dummyData).fill(0,).map((_,idx) =>
+                            <li key={idx} onClick={() => window.open(`/logs/transactions/${"oxb527e1b22978"}`,"_blank")}>
+
                                 <div>Tx</div>
                                 <h4>oxb527e1b22978...{'\n'}<span>9 Sec Ago</span></h4>
                                 <h4><span>From </span>0x0101d91c01aedd7bfo...{'\n'}
-                                    <span>To </span>to 0x0101d91c01aedd7bfo...
+                                    <span>To </span>0x0101d91c01aedd7bfo...
                                 </h4>
                                 <h5>22.6769 Aether</h5>
                         </li>

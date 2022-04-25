@@ -7,8 +7,13 @@ import { Contracts } from './Views/Contracts';
 import { Country } from './Views/Country';
 import { Dashboard } from './Views/Dashboard';
 import { Documentation } from './Views/Documentation';
+import { GDao } from './Views/Guides/Dao';
+import { GFactory } from './Views/Guides/Factory';
+import { GHub } from './Views/Guides/Hub';
+import { GNode } from './Views/Guides/Node';
 import { Landing } from './Views/Landing';
 import { Logs } from './Views/Logs';
+import { Transaction } from './Views/Logs/Transaction';
 import { NodeStats } from './Views/Node_stats';
 import { Staking } from './Views/Staking';
 import { TokenStats } from './Views/TokenStats';
@@ -48,7 +53,14 @@ export function Pages() {
               <Route path="/contracts" element={ <Contracts mobV={isMob}/>}/>
               <Route path="/documentation" element={ <Documentation mobV={isMob}/>}/>
               <Route path="/logs" element={ <Logs mobV={isMob}/>}/>
+              <Route path="/logs/transactions/:txn_id" element={ <Transaction mobV={isMob}/>}/>
 
+          
+              <Route path="/guides/dao" element={ <GDao mobV={isMob}/>}/>
+              <Route path="/guides/factory" element={ <GFactory mobV={isMob}/>}/>
+              <Route path="/guides/hub" element={ <GHub mobV={isMob}/>}/>
+              <Route path="/guides/node" element={ <GNode mobV={isMob}/>}/>
+            
               <Route path="*" element={ <Landing mobV={isMob}/>}/>
             </Routes>
           </Router>

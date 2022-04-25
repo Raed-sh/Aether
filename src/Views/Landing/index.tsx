@@ -8,6 +8,8 @@ export const Landing:FC<any> = (props:any) => {
 
     const [chain, setChain] = useState<string>("Polygon");
 
+
+
     return(
         <div className="landing">
             <div className="land_cont">
@@ -38,7 +40,7 @@ export const Landing:FC<any> = (props:any) => {
                 <section>
                         <ul>
                             <li className="act"><a >Documentaion</a></li>
-                            <li><a>Logs&TXNS</a></li>
+                            <Link to="/logs"><li>Logs&TXNS</li></Link>
                             <Link to="/dashboard"><li>Dashboard</li></Link>
                         </ul>
                     </section>
@@ -70,7 +72,7 @@ export const Landing:FC<any> = (props:any) => {
                     {chains.map((c, idx) => 
                     <li key={idx} className={chain === c.name ? "chain" : ""} onClick={() => setChain(c.name)}>
                         <div>
-                            <h3>{c.name}{'\n'}</h3>
+                            <h3>{c.name}</h3>
                             <div className="ch_info">
                                 <img src={c.logo}/>
                                 <h3><span>{c.symbol}</span></h3>
@@ -91,8 +93,8 @@ export const Landing:FC<any> = (props:any) => {
 
             <div className="last_sec">
                 
-                <div className="guides">
-                <ul >
+                <div className="guides" id="guides">
+                <ul>
                     {guides.map((g,idx) => 
                     
                     <li key={idx} onClick={() => window.open(g.site, "_blank")}>

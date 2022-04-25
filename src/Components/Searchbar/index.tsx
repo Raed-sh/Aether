@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
+import { Link } from "react-router-dom";
 import { icons } from "../../Assets";
 
 export const Searchbar:FC<any> = (props:any) => {
-
 
     return(
         <div className="search">
@@ -11,7 +11,7 @@ export const Searchbar:FC<any> = (props:any) => {
             <option value={"option1"}>Option 1</option>
             </select>
             <input type={"text"} placeholder={"Search by Adress / Txn Hash / Block /Token / Ens"} onChange={(e) => props.setSearchData({...props.searchData,address:e.target.value})}/>
-            <button><img src={icons.search}/></button>
+            <Link to={`/logs/transactions/${props.searchData.address}`}> <button><img src={icons.search}/></button></Link>
         </div>
     )
 }
