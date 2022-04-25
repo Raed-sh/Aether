@@ -59,6 +59,17 @@ import auto from './icons/auto.svg';
 import feed from './icons/feed.svg';
 import varis from './icons/varis.svg';
 
+import search from './icons/search.svg';
+
+import diff from './icons/diff.svg';
+import market from './icons/market.svg';
+import txn from './icons/txn.svg';
+
+import card from './icons/card.svg';
+
+
+
+
 
 
 
@@ -78,5 +89,6 @@ export const icons = {
     },
     qm,cost,ip,network,secure,arrow,act,non_act,metamask, walletconnect,
     d_arr, up_arr, down_card, up_card,
-    p_o, p_p, l_arr, r_arr, A, api, auto, feed, varis
+    p_o, p_p, l_arr, r_arr, A, api, auto, feed, varis, search,
+    diff, market, txn, card
 }

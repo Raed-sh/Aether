@@ -1,0 +1,40 @@
+.search{
+    display: flex;
+    align-items: center;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    height: 3.5vh;
+    border-radius: 4px;
+}
+
+.search select{
+    width: 6vw;
+    height: 3.5vh;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid @black ;
+    font-size: 1.4vh;
+    padding: 0 .5vw;
+    cursor: pointer;
+    color: @black;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+    background: url(/Assets/icons/d_arr_b.svg) no-repeat transparent;
+    background-size: 12px;
+    background-position: 4.5vw ;
+}
+
+.search input[type=text]{
+    width: 25vw;
+    height: 3.5vh;
+    padding: 0 1vw;
+    font-size: 1.6vh;
+    outline: none;
+}
+.search button{
+    width: 1.5vw;
+    background: @purple;
+    height: 3.5vh;
+    border: none;
+}
