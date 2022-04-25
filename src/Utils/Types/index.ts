@@ -1,3 +1,5 @@
-export type MOBV = {
-    
+
+export type SearchData = {
+    address:string
+    filter:string
 }

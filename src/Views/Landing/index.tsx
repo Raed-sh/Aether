@@ -14,9 +14,9 @@ export const Landing:FC<any> = (props:any) => {
                 <div className="land_h">
                     <div className="l_h">
                         <h1>
-                        <span>0</span> 
-                        <span>x </span> 
-                        <span><img src={icons.A} /></span>
+                            <span>0</span> 
+                            <span>x </span> 
+                            <span><img src={icons.A} /></span>
                         {'\n'}
                         The <span>Multi</span>chain Haven
                         </h1>

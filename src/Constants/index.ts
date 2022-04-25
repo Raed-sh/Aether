@@ -11,7 +11,7 @@ export const appbar = [
     },
     {
         name:'Logs&TXNS',
-        link:'/'
+        link:'/logs'
     },
     {
         name:'Dashboard',

@@ -1,0 +1,136 @@
+.logs{
+    background: #DDD9F3;
+}
+.h_log{
+    width: 100%;
+    height: 30vh;
+    background: url(/Assets/images/bg.png) no-repeat right;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh 5vw 0 10vw;
+}
+.h_log h1{
+    color: @purple;
+    font-size: 4vh;
+    white-space: pre-wrap;
+    text-transform: uppercase;
+}
+.h_log h1 img{
+    width: 2.5vw;
+    border: 1px solid @purple;
+    margin: 2vh 0;
+}
+.h_log span{
+    margin-left: 2vw;
+    color: @white;
+    font-size: 3vh;
+    text-transform: capitalize;
+    
+}
+.h_log span span{
+    margin-left: 0;
+    color: @gray;
+}
+
+.h_cont{
+    min-height: 90vh;
+}
+.boxs_cont{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    transform: translateY(-5vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+}
+.box.info{
+    width: 100%;
+    height: 24vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box.txns{
+    width: 49%;
+    min-height: 58vh;
+    margin-top: 3vh;
+}
+
+.box.info ul{
+    display: grid;
+    grid-template-columns: repeat(2,0fr);
+    align-items: center;
+}
+.box.info ul li{
+    width: 28vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    border: 1px solid #DDD9F3;
+}
+
+.box.info img{
+    width: 2.5vw;
+    height: 5vh;
+    background: radial-gradient(84% 84% at 50% 50%, #FDFBFB 0%, rgba(253, 251, 251, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+    margin: 0 1vw;
+}
+.box.txns h2{
+    padding: 2vh 1vw;
+    color: @purple;
+}
+
+.box.txns ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+    border: 1px solid #DDD9F3;
+    padding: 0 1vw;
+
+}
+.box.txns ul li div{
+    background: url(/Assets/icons/card.svg) no-repeat center;
+    width: 2vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box.txns h4{
+    color: @purple;
+    white-space: pre-wrap;
+    line-height: 2.5vh;
+}
+.box.txns h4 span{
+    color: @gray;
+    font-size: 1.4vh;
+}
+.box.txns h5{
+    padding: 1vh 1vw;
+    color: @gray;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+}
+.box.txns button{
+    width: 90%;
+    height: 4vh;
+    margin: 1vh 5%;
+    background: radial-gradient(49.93% 49.8% at 50% 50%, #FDFBFB 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 0px 4px rgba(66, 5, 240, 0.4);
+    border-radius: 4px;
+    border: none;
+    color: @purple;
+    font-size: 1.6vh;
+}
