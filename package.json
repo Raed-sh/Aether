@@ -31,7 +31,7 @@
     "react-dom": "^18.0.0",
     "react-horizontal-timeline": "^1.5.3",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.7",
     "react-svg-worldmap": "^2.0.0-alpha.1",
     "stream-browserify": "^3.0.0",

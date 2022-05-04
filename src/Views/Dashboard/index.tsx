@@ -32,7 +32,7 @@ export const Dashboard:FC<any> = (props:any) => {
                 <div className="node_info">
                     <div className="node stats">
                         <h2>Node Stats</h2>
-                        <button>View all nodes</button>
+                        <Link to="/node-stats"><button>View all nodes</button></Link>
                         <div className="node_cont">
                             <ul>
                                 <li>
@@ -54,7 +54,7 @@ export const Dashboard:FC<any> = (props:any) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="node os">
+                    {/* <div className="node os">
                     <h2>OS</h2>
                         <button>View all stats</button>
                         <div className="node_cont">
@@ -78,10 +78,10 @@ export const Dashboard:FC<any> = (props:any) => {
                                     </li>
                                 </ul>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="node country">
                     <h2>Country</h2>
-                        <button>View all nodes</button>
+                    <Link to="/country"><button>View all nodes</button></Link>
                         <div className="node_cont">
                             <section>
                                 <button><img src={icons.up_card}/></button>
@@ -106,7 +106,7 @@ export const Dashboard:FC<any> = (props:any) => {
                     </div>
                     <div className="node client">
                     <h2>Client</h2>
-                        <button>View all nodes</button>
+                    <Link to="/client"><button>View all nodes</button></Link>
                         <div className="node_cont">
                             <section>
                                 <button><img src={icons.up_card}/></button>
@@ -136,7 +136,7 @@ export const Dashboard:FC<any> = (props:any) => {
                 <h1>My Tokens</h1>
             </div>
 
-            <div className="chains">
+            <div className="chains dash">
                 <ul >
                     {chains.map((c, idx) => 
                     <li key={idx}>
@@ -147,11 +147,26 @@ export const Dashboard:FC<any> = (props:any) => {
                         <h3>34.5678{'\n'}<span>{c.symbol}</span></h3>
                         
 
-                        <button>View stats</button>
+                        <Link to={"/tokens"}><button>View stats</button></Link>
                     </li>
                         )
                     }
                 </ul>
+            </div>
+
+            <div className="nodes cont">
+                <h1>My Cotracts</h1>
+                <div className="node_info">
+
+                <ul>
+                    {Array(5).fill(1).map((_,idx) => <li>Contract {idx}</li>)}
+                </ul>
+                <Link to={"/contracts"}><button>More Contracts</button></Link>
+
+                   <div className="pl_gr">
+                        {Array(10).fill(1).map((_,idx) => <button>Function {idx}</button>)}
+                    </div>   
+                </div>
             </div>
         </div>
     );

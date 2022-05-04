@@ -19,7 +19,7 @@ export const Appbar:FC = () => {
 
       function handleRoutes(i:any){
           if(i.name.toLowerCase() === "guides"){
-                return <Link to="guides" spy={true} smooth={true}>Guides</Link>
+                // return <Link to="guides" spy={true} smooth={true}>Guides</Link>
           }else{
             return <a href={i.link}>{i.name}</a>
           }
@@ -43,7 +43,8 @@ export const Appbar:FC = () => {
             <ul>
                 {appbar.map((i,idx) =>
                     <li key={idx}>
-                        {handleRoutes(i)}
+                        {/* {handleRoutes(i)} */}
+                        <a href={i.link}>{i.name}</a>
                     </li>
                 )}
             </ul>
