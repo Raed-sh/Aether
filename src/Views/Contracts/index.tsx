@@ -37,7 +37,6 @@ export const Contracts: FC<any> = (props: any) => {
         {checkType[0] ? 
         <div className="pl_gr">
             {Array(10).fill(0).map((_,idx) => <button>Function {idx}</button>)}
-            
         </div>      
         :
         

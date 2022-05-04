@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import { Link } from "react-router-dom";
+import Web3 from "web3";
 import { icons, images } from "../../Assets";
 import { chains, feats, socials, guides } from "../../Constants";
 
@@ -7,7 +8,6 @@ import { chains, feats, socials, guides } from "../../Constants";
 export const Landing:FC<any> = (props:any) => {
 
     const [chain, setChain] = useState<string>("Polygon");
-
 
 
     return(
@@ -109,7 +109,7 @@ export const Landing:FC<any> = (props:any) => {
                     </li>
                 )}
                 </ul>
-                <button onClick={() => window.open("/guides", "_blank")}>More developer guides</button>
+                <button onClick={() => window.open("/guides/getstarted", "_blank")}>More developer guides</button>
                 </div>
                 
                 <div className="community">

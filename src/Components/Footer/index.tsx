@@ -9,7 +9,7 @@ export const Footer:FC = () => {
 
     function handleRoutes(i:any){
         if(i.toLowerCase() === "guides"){
-              return <Link to="guides" spy={true} smooth={true}>Guides</Link>
+            //   return <Link to="guides" spy={true} smooth={true}>Guides</Link>
         }else{
           return <a href={i}>{i}</a>
         }
