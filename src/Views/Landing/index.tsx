@@ -1,14 +1,18 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Web3 from "web3";
 import { icons, images } from "../../Assets";
 import { chains, feats, socials, guides } from "../../Constants";
+import { setProvider } from "../../Redux/ActionCreator";
+import { Contracts } from "../Contracts";
 
 
 export const Landing:FC<any> = (props:any) => {
 
+    const STATE = useSelector(state => state)
     const [chain, setChain] = useState<string>("Polygon");
-
 
     return(
         <div className="landing">
