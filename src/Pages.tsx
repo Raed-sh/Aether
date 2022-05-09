@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Providers } from './providers';
+import { setProvider } from './Redux/ActionCreator';
 import { AdjustmentScreen } from './Utils/Functions';
 import { Client } from './Views/Client';
 import { Contracts } from './Views/Contracts';
@@ -17,6 +20,9 @@ import { TokenStats } from './Views/TokenStats';
 
 export function Pages() {
   
+  const dispatch = useDispatch() as any;
+  
+
   const [isMob, setIsMob] = useState<boolean>(false);
   
   useEffect(() => {
@@ -35,6 +41,11 @@ export function Pages() {
 
       AdjustmentScreen()
   },[isMob]);
+
+  useEffect(() => {
+    dispatch(setProvider())
+ },[])
+
 
   return (
       <Providers>

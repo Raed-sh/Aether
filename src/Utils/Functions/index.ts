@@ -1,3 +1,5 @@
+import Web3 from "web3";
+import { truncateRegex } from "../../Constants";
 import { injectedConnector, walletconnect } from "../Wallet/connectors";
 
 export function AdjustmentScreen() {
@@ -46,6 +48,16 @@ export function connectedWallet (account:any, active:any){
       }
       return "Connect Wallet";
 };
+
+export function TrimAddress(address:string){
+  const match = address.match(truncateRegex);
+  if (!match) {
+    return address
+  };
+  return `${match[1]}…${match[2]}`;
+};
+
+
 export function connectMapper(conn_type:string,active:any,activate:any){
   if(!active){
    switch(conn_type){
@@ -61,4 +73,14 @@ export function connectMapper(conn_type:string,active:any,activate:any){
 export function toTimestamp(humDate:any){
   var datum = Date.parse(humDate);
   return datum/1000;
-}
+};
+
+
+
+// WEB3 CALLS
+
+export  function initW3Contract(chainId: string, contractAddress: string, contractAbi: any){
+  // const w3 = new Web3(getW3Provider(chainId)); this line should be reviewed
+  const w3 = new Web3(Web3.givenProvider)
+  return new w3.eth.Contract(contractAbi, contractAddress);
+};

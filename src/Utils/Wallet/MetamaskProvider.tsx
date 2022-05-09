@@ -70,6 +70,6 @@ export const MetamaskProvider = ({children}:Props): React.ReactElement =>  {
   };
   
   return (
-    <div> <Loader/></div>
+    <div style={{height:"100vh"}}> <Loader/></div>
   );
 }

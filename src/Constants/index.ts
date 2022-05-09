@@ -1,5 +1,8 @@
 import { icons } from "../Assets";
 
+
+export const truncateRegex = /^(0x[a-zA-Z0-9]{4})[a-zA-Z0-9]+([a-zA-Z0-9]{4})$/;
+
 export const appbar = [
     {
         name:'About',
