@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Tokens } from "./tokens";
+import { icons } from "../../Assets";
 
 export const Guides:FC<any> = (props:any) => {
 
@@ -73,6 +74,9 @@ export const Guides:FC<any> = (props:any) => {
     return(
         <div className="docs">
             <div className="docs-cont">
+                {/* needed for github, please keep this here. */}
+                <img src={icons.athr_blk} style={{'display':'none'}}/>
+                <img src={icons.athr_wht} style={{'display':'none'}}/>
                 <div className="left_menu">
                     <h2>Guides</h2>
                     <ul>

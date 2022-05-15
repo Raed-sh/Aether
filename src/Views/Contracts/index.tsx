@@ -89,3 +89,10 @@ export const Contracts: FC<any> = (props: any) => {
     </div>
   );
 };
+
+
+/*
+    There's mainly two types of Aether contracts:
+        1. Aethered => only once, will support inflow and outflow 
+        2. Aethering => always, changes takes place everywhere.
+*/

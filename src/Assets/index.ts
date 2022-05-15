@@ -66,8 +66,14 @@ import market from './icons/market.svg';
 import txn from './icons/txn.svg';
 
 import card from './icons/card.svg';
+<<<<<<< HEAD
 import close from './icons/close.svg';
 
+=======
+
+import athr_blk from './icons/the_aether_black.svg';
+import athr_wht from './icons/the_aether_white.svg';
+>>>>>>> 2a17d88338e5d376c09e234a68fd921e518c91bb
 
 
 
@@ -90,5 +96,9 @@ export const icons = {
     qm,cost,ip,network,secure,arrow,act,non_act,metamask, walletconnect,
     d_arr, up_arr, down_card, up_card,
     p_o, p_p, l_arr, r_arr, A, api, auto, feed, varis, search,
+<<<<<<< HEAD
     diff, market, txn, card, close
+=======
+    diff, market, txn, card, athr_wht, athr_blk
+>>>>>>> 2a17d88338e5d376c09e234a68fd921e518c91bb
 }

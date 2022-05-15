@@ -12,9 +12,9 @@ export const Documentation:FC<any> = (props:any) => {
         <div className="land_cont">
             <div className="land_h">
                 <div className="l_h">
-                    <h1>Discover the AETHERchain documentation</h1>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure., "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
-                    <a>Get The Started Guide</a>
+                    <h1>Discover the Aether documentation</h1>
+                    <p>docs</p>
+                    <a>Get Started Guide</a>
                 </div>
                 <div className="r_h">
                     <img src={images.bgm}/>
