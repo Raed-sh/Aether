@@ -12,7 +12,8 @@ import { Dashboard } from './Views/Dashboard';
 import { Documentation } from './Views/Documentation';
 import { Guides } from './Views/Guides';
 import { Landing } from './Views/Landing';
-import { Logs } from './Views/Logs';
+import { Txns } from './Views/Logs';
+import { Logs } from './Views/Logs/logs';
 import { Transaction } from './Views/Logs/Transaction';
 import { NodeStats } from './Views/Node_stats';
 import { Staking } from './Views/Staking';
@@ -57,14 +58,13 @@ export function Pages() {
               <Route path="/staking" element={ <Staking mobV={isMob}/>}/>
               <Route path="/client" element={ <Client mobV={isMob}/>}/>
               <Route path="/country" element={ <Country mobV={isMob}/>}/>
-              <Route path="/tokens" element={ <TokenStats mobV={isMob}/>}/>
+              <Route path="/tokens/:token_name" element={ <TokenStats mobV={isMob}/>}/>
               <Route path="/contracts" element={ <Contracts mobV={isMob}/>}/>
               <Route path="/documentation" element={ <Documentation mobV={isMob}/>}/>
+              {/* <Route path="/logs" element={ <Txns mobV={isMob}/>}/> */}
               <Route path="/logs" element={ <Logs mobV={isMob}/>}/>
               <Route path="/logs/transactions/:txn_id" element={ <Transaction mobV={isMob}/>}/>
-          
               <Route path="/guides/:doc" element={ <Guides mobV={isMob}/>}/>
-              
               <Route path="*" element={ <Landing mobV={isMob}/>}/>
             </Routes>
           </Router>

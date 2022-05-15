@@ -66,7 +66,7 @@ import market from './icons/market.svg';
 import txn from './icons/txn.svg';
 
 import card from './icons/card.svg';
-
+import close from './icons/close.svg';
 
 
 
@@ -90,5 +90,5 @@ export const icons = {
     qm,cost,ip,network,secure,arrow,act,non_act,metamask, walletconnect,
     d_arr, up_arr, down_card, up_card,
     p_o, p_p, l_arr, r_arr, A, api, auto, feed, varis, search,
-    diff, market, txn, card
+    diff, market, txn, card, close
 }

@@ -38,3 +38,20 @@ export type TRANSACTION = {
     txn_hash:string
     block_number:number
 }
+
+export type ARG = {
+    type:string,
+    name:string,
+    value:any
+};
+
+export type DUMMY = {
+    function_name:string,
+    argues:ARG[]
+};
+
+export type FUNCTION = {
+    name:string,
+    arguments: ARG[],
+    response:any
+}

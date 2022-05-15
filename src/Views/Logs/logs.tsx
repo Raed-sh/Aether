@@ -6,23 +6,34 @@ import { icons } from "../../Assets";
 import { BarChart } from "../../Components/BarChart";
 import { Loader } from "../../Components/Loader";
 import { Searchbar } from "../../Components/Searchbar";
+import { Tabs } from "../../Components/Tabs";
+import { chains, commonData } from "../../Constants";
 import { CONTRACT } from "../../Constants/contracts";
 import { explorerNav, TrimAddress } from "../../Utils/Functions";
 import {  SearchData, TRANSACTION } from "../../Utils/Types";
 
-export const Txns:FC<any> = (props:any) => {
+export const Logs:FC<any> = (props:any) => {
 
     const STATE = useSelector(state => state) as PROVIDER_STATE
 
     const [searchData, setSearchData] = useState<SearchData>({address:"",filter:""});
-
-    const [dummyData, setDummyData] = useState<number>(5);
-
-    const [Aethers, setAethers] = useState<any>(undefined);
     const [lastTxns, setLastTxns] = useState<TRANSACTION[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
     const [shownblocks, setShownBlocks] = useState<number>(5);
+    const [Aethers, setAethers] = useState<any>(undefined);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [chainData, setChainData] = useState({
+        "chain":"Binance",
+        "chain ID":"56",
+        "hub address":"0x2d9762564fa6802B5Ca0853830AA3676a3a7B706",
+        "treasury address":"0x2d9762564fa6802B5Ca0853830AA3676a3a7B706",
+        "native treasury":"300 BNB",
+        "OxA treasury":"100,000,000 OxA",
+        "avg deploy fees":"10000 OxA",
+        "avg txn fees":"7760 OxA",
+    });
 
+    
+    
 
     useEffect(() => {
         if(typeof(Aethers) === "undefined"){
@@ -78,7 +89,8 @@ export const Txns:FC<any> = (props:any) => {
         setLoading(false)
     };
 
-    
+  
+
     return(
         <div className="logs">
             <div className="h_log">
@@ -93,69 +105,36 @@ export const Txns:FC<any> = (props:any) => {
                 <div className="boxs_cont">
                     <div className="box info">
                         <ul>
-                            <li>
-                                <img src={icons.A}/>
-                                <h3>
-                                    Aether price {'\n'}
-                                    <span>$0.34
-                                        <span>(0.44%)</span>
-                                    </span>
-                                </h3>
-                            </li>
-
-                            <li>
-                                <img src={icons.txn}/>
-                                <h3>
-                                    Transactions {'\n'}
-                                    <span>14 445 678
-                                        
-                                    </span>
-                                </h3>
-                            </li>
-
-                            <li>
-                                <img src={icons.market}/>
-                                <h3>
-                                    Market capitalization {'\n'}
-                                    <span>
-                                        $345,3478,678.00
-                                    </span>
-                                </h3>
-                            </li>
-
-                            <li>
-                                <img src={icons.diff}/>
-                                <h3>
-                                    Difficulty {'\n'}
-                                    <span>
-                                        9, 445.67 TH
-                                    </span>
-                                </h3>
-                            </li>
-                        </ul>
-                        <div>
-                            <BarChart/>
-                        </div>
-                    </div>
-                    <div className="box txns">
-                        <h2>Latest Contracts</h2>
-                        <ul>
-                            {Array(dummyData).fill(0,).map((_,idx) => 
-                            <li key={idx}>
-                                <div>CT</div>
-                                <h4>14567896{'\n'}<span>9 Sec Ago</span></h4>
-                                <h4>Miner 666 Mining Pool{'\n'}<span>70 txns <span>in 10sec</span></span></h4>
-                                <h5>22.6769 Aether</h5>
-                        </li>
+                            {commonData.map((c,idx) => 
+                                <li key={idx}>
+                                    <img src={c.logo}/>
+                                    <h3> {`${c.title} \n`}
+                                        <span>{c.value}</span>{`\n`}
+                                    </h3>
+                                </li>
                             )}
                         </ul>
-                        {dummyData <= 5 &&(<button onClick={() => setDummyData(20)}>View all blocks</button>)}
                     </div>
 
 
-                    <div className="box txns">
+                    <div className="box chain_d">
+                        <h2>Supported chians</h2>
+                        <Tabs setChainData={setChainData} chainData={chainData}/>
+
+                        <ul>
+                            {typeof(chainData) !== "undefined"&& Object.keys(chainData).map((c,idx) => 
+                            <li key={idx}>
+                                <h3><img src={icons.qm}/> {c}:</h3>
+                                <h3>{(chainData as any)[c]}</h3>
+                            </li>
+                            )}
+                        </ul>
+                    </div>
+                </div>
+                <div className="box txns">
                         <h2>Latest Transactions</h2>
                         {loading ? <Loader/> :
+                            lastTxns.length > 0 ? 
                         <>
                         <ul>
                             {lastTxns.slice(0,shownblocks).map((t,idx) =>
@@ -174,12 +153,12 @@ export const Txns:FC<any> = (props:any) => {
                         </ul>
                          {shownblocks < lastTxns.length &&( <button onClick={() => setShownBlocks(lastTxns.length)}>View all blocks</button>)}
                         </>
+                        :
+                        <h1>No Txns currently!</h1>
                         }
                         
                     </div>
-                </div>
             </div>
-
         </div>
-    )
-}
+    );
+};

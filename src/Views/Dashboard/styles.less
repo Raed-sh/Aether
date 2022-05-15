@@ -1,5 +1,5 @@
 .nodes{
-    min-height: 50vh;
+    min-height: 10vh;
     background: @white;
     display: flex;
     flex-direction: column;
@@ -122,9 +122,10 @@
     transform: scale(0.5);
 }
 
-.dashboard .chains ul li{
+.chains.dash ul li{
     width: 12vw;
-    height: 25vh;
+    height: 30vh;
+    border-radius: .6vh;
 }
 
 .dashboard .chains ul li button{
@@ -135,6 +136,10 @@
     background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     border-radius: 4px;
 }
+.chains.dash{
+    min-height: 30vh;
+}
+
 
 
 

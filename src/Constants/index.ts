@@ -60,7 +60,6 @@ export const feats = [
     },
 ];
 
-
 export const guides = [
     {
         name:"DAO",
@@ -86,32 +85,34 @@ export const guides = [
         action:"Check how to run an Aether node",
         site:"guides/node",
     },
-]
-
-
+];
 
 export const chains = [
     {
         logo:icons.chains.polygon,
         name:"Polygon",
+        id:"137",
         symbol:"MATIC",
         features:[
             "Cheap Gas Fees","Lorem ipsum dolor sit amet","EVM compatibility",
         ],
-        site:"https://polygon.technology/"
+        site:"https://polygon.technology/",
     },
     {
         logo:icons.chains.ethereum,
         name:"Ethereum",
+        id:"1",
         symbol:"ETH",
         features:[
             "Consistant Uptime","Lorem ipsum dolor sit amet","EVM compatibility",
         ],
-        site:"https://ethereum.org/en/"
+        site:"https://ethereum.org/en/",
     },
     {
         logo:icons.chains.binance,
         name:"Binance Smart Chain",
+        id:"56",
+
         symbol:"BSC",
         features:[
             "Transaction Volume","Lorem ipsum dolor sit amet","EVM compatibility",
@@ -121,6 +122,7 @@ export const chains = [
     {
         logo:icons.chains.avalanche,
         name:"Avalanche",
+        id:"43114",
         symbol:"AVAX",
         features:[
             "Fast Finality Time","Lorem ipsum dolor sit amet","EVM compatibility",
@@ -130,6 +132,7 @@ export const chains = [
     {
         logo:icons.chains.fantom,
         name:"Fantom",
+        id:"250",
         symbol:"FTM",
         features:[
             "Scalability","Lorem ipsum dolor sit amet","EVM compatibility",
@@ -137,8 +140,9 @@ export const chains = [
         site:"https://fantom.foundation/"
     },
     {
-        logo:icons.chains.fantom,
+        logo:icons.chains.cronos,
         name:"Cronos",
+        id:"25",
         symbol:"CRO",
         features:[
             "Sustainable","Lorem ipsum dolor sit amet","EVM compatibility",
@@ -286,9 +290,7 @@ export const stats_table = {
             OS:"linux-arm64"
         },
     ],
-}
-
-
+};
 
 export const funcs = [
     {
@@ -311,4 +313,155 @@ export const funcs = [
         desc:"Automate smart contract functions and maintenance using Aetherchain Keepers.",
     },
 
-]
+];
+
+export const commonData = [
+    {
+        title:"Aether price",
+        value:"$0.34",
+        logo:icons.A,
+        childs:[],
+    },
+    {
+        title:"Transactions",
+        value:"14,445,678",
+        logo:icons.txn,
+        childs:[],
+    },
+    {
+        title:"Market capitalization",
+        value:"$345,3478,678.00",
+        logo:icons.market,
+        childs:[],
+    },
+];
+
+export const dummy_data = [
+    {
+        "name":"function 1",
+        "arguments" : [
+        {
+            "type":"address",
+            "name":"ADDRESS 1",
+            "value":""
+        },
+    {
+        "type":"number",
+        "name":"NUMBER 1",
+        "value":""
+
+    }],
+        "response":""
+    },
+    {
+        "name":"function 2",
+        "arguments" : [
+        {
+            "type":"string",
+            "name":"ADDRESS 2",
+            "value":""
+
+        },
+        {
+            "type":"bytes",
+            "name":"NUMBER 1",
+            "value":""
+        }
+    ],
+    "response":""
+    },
+];
+
+export const Tokens_Table = [
+    {
+        headers:["Token Name", "Token Address", "Balnace", "Token Type"],
+        type:"",
+        tokens:[
+            {
+                t_name:"name",
+                t_adds:"47hj63gk6j3j4hkjhkjk6...",
+                t_bal:"0.55",
+                t_type:"ERC 721",
+            },
+            {
+                t_name:"name",
+                t_adds:"47hj63gk6j3j4hkjhkjk6...",
+                t_bal:"0.55",
+                t_type:"ERC 721",
+
+            },
+            {
+                t_name:"name",
+                t_adds:"47hj63gk6j3j4hkjhkjk6...",
+                t_bal:"0.55",
+                t_type:"ERC 721",
+
+            },
+            {
+                t_name:"name",
+                t_adds:"47hj63gk6j3j4hkjhkjk6...",
+                t_bal:"0.55",
+                t_type:"ERC 721",
+
+            },
+            {
+                t_name:"name",
+                t_adds:"47hj63gk6j3j4hkjhkjk6...",
+                t_bal:"0.55",
+                t_type:"ERC 721",
+            },
+            
+        ]
+    },
+];
+
+
+export const dummy_cont = {
+    address:"0x4452149eb56A93a8e0EE3B117bb6E4101885Ec2C",
+    abi:[
+        {
+            "inputs": [],
+            "name": "getAddress",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getNumber",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "newTemp",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "address",
+                    "name": "_add",
+                    "type": "address"
+                }
+            ],
+            "name": "setData",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

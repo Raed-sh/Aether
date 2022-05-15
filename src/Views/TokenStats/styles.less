@@ -1,18 +1,18 @@
 .tokens{
     background: @lightWhite;
+    padding: 1vh 0;
+    min-height: 55vh;
 }
 
 .tok_h{
     padding-top: 2vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.tok_h h3{
-    padding-left: 1vw;
-}
-.tok_h h3 span{
-    color: @gray;
-    font-weight: bolder;
+.tok_h h2{
+    display: flex;
+    align-items: center;
 }
 
 .tokens .s_table{
@@ -20,7 +20,7 @@
     overflow: auto;
 }
 
-.tokens .s_table button{
+.tokens .s_table button, .tok_h button{
     width: 5vw;
     height: 3vh;
     background: @purple;
@@ -71,4 +71,16 @@
     color: @black;
     background: radial-gradient(49.93% 49.8% at 50% 50%, rgba(253, 251, 251, 0.8) 0%, #FDFBFB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     border-radius: 4px;
+}
+
+.close{
+    position: absolute;
+    width: 1vw;
+    height: 2vh;
+    right: 26%;
+    top: 55%;
+    cursor: pointer;
+}
+.close img{
+    object-fit: cover;
 }

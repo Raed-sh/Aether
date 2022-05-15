@@ -1,11 +1,20 @@
-import { FC, useState } from "react";
-import { icons } from "../../Assets";
+import { FC, useEffect, useState } from "react";
+import Web3 from "web3";
+import { ArgueC } from "../../Components/Argue";
+import { dummy_data } from "../../Constants";
+import { DUMMY, FUNCTION } from "../../Utils/Types";
 
 export const Contracts: FC<any> = (props: any) => {
 
-    const [checkType, setCheckType] = useState<boolean[]>([false, true]);
+    
 
+    const [checkType, setCheckType] = useState<boolean[]>([true, false]);
+    const [contractData, setContractData] = useState<FUNCTION[]>([]);
+    
 
+    
+
+    
   return (
     <div className="contracts">
       <div className="s_cont">
@@ -15,12 +24,17 @@ export const Contracts: FC<any> = (props: any) => {
             <label>
                 <input type={"checkbox"} checked={checkType[0]} onChange={(e) => setCheckType({...checkType,0:e.target.checked,1:false})}/>
                 Last Contracts 
-
             </label>
+            <div className="s_search">
+            <label>
+                Search for contract
+                <input type={"text"} placeholder={"Contract Address:...eg:OxA"}/>
+                <button>Search</button>
+            </label>
+            </div>
             <ul>
                 <li>Contract 1</li>
                 <li>Contract 1</li>
-                
             </ul>
 
             </div>
@@ -35,8 +49,24 @@ export const Contracts: FC<any> = (props: any) => {
 
 
         {checkType[0] ? 
-        <div className="pl_gr">
-            {Array(10).fill(0).map((_,idx) => <button>Function {idx}</button>)}
+        <div className="pl_gr fc">
+            {contractData.map((f,idx) => 
+                <section key={idx}>
+                    {f.arguments.map((a,i) => 
+                        <label key={i}>
+                            <ArgueC 
+                            type={a.type}
+                            title={a.name}
+                            fi={idx}
+                            ai={i}
+                            contractData={contractData}
+                            setContractData={setContractData}/>
+                        </label>
+                    
+                    )}
+                    <button>{f.name}</button>
+                </section>
+            )}
         </div>      
         :
         

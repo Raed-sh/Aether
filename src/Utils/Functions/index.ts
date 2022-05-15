@@ -74,7 +74,22 @@ export function toTimestamp(humDate:any){
   var datum = Date.parse(humDate);
   return datum/1000;
 };
-
+export function explorerNav(id:string, hash:string){
+  switch(id){
+      case "1":
+          return `https://etherscan.io/tx/${hash}`;
+      case "3":
+          return `https://ropsten.etherscan.io/tx/${hash}`;
+      case "56":
+          return `https://bscscan.com/tx/${hash}`;
+      case "137":
+          return `https://ftmscan.com/tx/${hash}`;
+      case "250":
+          return `https://polygonscan.com/tx/${hash}`;
+      default:
+          return `/logs/transactions/${hash}`
+  }
+};
 
 
 // WEB3 CALLS
